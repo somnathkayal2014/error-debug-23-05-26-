@@ -4,6 +4,6 @@ import { hasToken } from "../middleware/hasToken.js";
 
 const userRouteTwo = express.Router();
 
-userRouteTwo.post("/createTwo",  createTodo);
+userRouteTwo.post("/createTwo", hasToken, createTodo);
 
 export default userRouteTwo;

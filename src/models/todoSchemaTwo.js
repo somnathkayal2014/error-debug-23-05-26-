@@ -8,8 +8,8 @@ const todoSchemaTwo = new mongoose.Schema(
     },
     userID: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: cls2,
-      // required: true,
+      ref: "cls2",
+      required: true,
     },
   },
   { timestamps: true },

@@ -1,11 +1,11 @@
-import todoSchema from "../models/todoSchema.js";
+import todoSchemaTwo from "../models/todoSchemaTwo.js";
 
 export const createTodo = async (req, res) => {
   try {
     const { title } = req.body;
-    const createTodo = await todoSchema.create({
+    const createTodo = await todoSchemaTwo.create({
       title: title,
-      // userID: req.userID,
+      userID: req.userID,
     });
     console.log("todo Created", createTodo);
     return res.status(201).json({
